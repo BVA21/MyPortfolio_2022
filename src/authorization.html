@@ -1,0 +1,180 @@
+ <!DOCTYPE html>
+ <html class="h-100" lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Авторизация</title>
+     <link rel="stylesheet" href="/styles/bootstrap.css">
+     <link rel="stylesheet" href="/styles/bootstrap.min.css">
+     <link rel="stylesheet" href="/styles/style.css">
+
+ </head>
+ 
+ <body class="d-flex flex-column h-100">
+
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom container-fluid site-header sticky-top">
+        <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <span class="fs-4">Название сайта</span>
+        </a>
+  
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a href="#" class="nav-link">О нас</a></li>
+            <!-- <li class="nav-item "><a id="modal-registration" href="#" class="nav-link active" aria-current="page">Регистрация</a></li> -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalSignUp">Регистрация</button>
+        </ul>
+        
+    </header>
+
+    <!-- Модальное окно регистрации -->
+    <div class="modal fade" id="modalSignUp" tabindex="-1" aria-labelledby="modalSignUpLabel" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content rounded-5 shadow">
+                <div class="modal-header p-5 pb-4 border-bottom-0"> 
+                    <h2 class="fw-bold mb-0">Регистрация</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body p-5 pt-0">
+                    <form class="row g-1 needs-validation" novalidate>
+                        
+                        <div class="my-2">
+                            <label for="validationEmail" class="form-label">Электронная почта</label>
+                            <div class="input-group has-validation">
+                                <!-- <span class="input-group-text" id="inputGroupPrepend">@</span> -->
+                                <input type="email" class="form-control rounded-4" id="validationEmail" aria-describedby="inputGroupPrepend" placeholder="username@example.com" required>
+                                <div class="invalid-feedback">
+                                Пожалуйста, введите корректный E-mail.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="my-2">
+                            <label for="validationWorkingPosition" class="form-label">Должность</label>
+                            <select class="form-select form-control rounded-4" id="validationWorkingPosition" required>
+                                <option selected disabled value="">Выбрать...</option>
+                                <option>Intern</option>
+                                <option>Junior</option>
+                                <option>Middle</option>
+                                <option>Senior</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Пожалуйста, выберите должность.
+                            </div>
+                        </div>
+                        <div class="my-2">
+                            <label for="inputPassword1" class="form-label">Пароль</label>
+                            <div class="input-group has-validation">
+                                <input type="password" class="form-control rounded-4" id="inputPassword1" required>
+                                <div class="invalid-feedback">
+                                    Поле не может быть пустым.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="my-2">
+                            <label for="inputPassword2" class="form-label">Подтверждение пароля</label>
+                            <div class="input-group has-validation">
+                                <input type="password" class="form-control rounded-4" id="inputPassword2" required>
+                                <div class="invalid-feedback">
+                                    Поле не может быть пустым.
+                                </div>
+                            </div>
+                        </div>
+                        <small class="text-muted mb-3">Нажимая кнопку «Продолжить», вы принимаете пользовательское соглашение и политику конфиденциальности.</small>
+                        
+                        <button class="w-100 btn btn-lg rounded-4 btn-primary" type="submit">Продолжить</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно "Забыли пароль?" -->
+    <div class="modal fade" id="modalRecovery" tabindex="-1" aria-labelledby="modalRecoverylLabel" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content rounded-5 shadow">
+                <div class="modal-header p-5 pb-4 border-bottom-0"> 
+                    <h2 class="fw-bold mb-0">Восстановление пароля</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body p-5 pt-0">
+                    <form class="row g-1 needs-validation" novalidate>
+                        
+                        <div class="my-2">
+                            <label for="validationEmail" class="form-label">Электронная почта</label>
+                            <div class="input-group has-validation">
+                                <!-- <span class="input-group-text" id="inputGroupPrepend">@</span> -->
+                                <input type="email" class="form-control rounded-4" id="validationEmail" aria-describedby="inputGroupPrepend" placeholder="username@example.com" required>
+                                <div class="invalid-feedback">
+                                Пожалуйста, введите корректный E-mail.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <small class="text-muted mb-3">На почту придёт автоматически сгенерированный пароль</small>
+                        
+                        <button class="w-100 btn btn-lg rounded-4 btn-primary" type="submit">Восстановить</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно регистрации -->
+    <!-- <div class="modal fade" id="modalSignUp" tabindex="-1" aria-labelledby="modalSignUplLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Заголовок модального окна</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+              <button type="button" class="btn btn-primary">Сохранить изменения</button>
+            </div>
+          </div>
+        </div>
+    </div> -->
+
+    <main class="form-signin m-auto">
+        <div class="container">
+            <form>
+                <!-- <img class="mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
+                <h1 class="h3 mb-3 fw-normal">Авторизация</h1>
+            
+                <div class="form-floating">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Электронный адрес</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Пароль</label>
+                </div>
+            
+                <div class="forgot mb-3">
+                    <a class="index_forgot" href="#" data-bs-toggle="modal" data-bs-target="#modalRecovery">Забыли пароль?</a>
+                </div>
+                <button class="w-100 btn btn-lg btn-primary" type="submit">Войти</button>
+                <!-- <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p> -->
+            </form>
+        </div>
+    </main>
+        
+
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container text-center">
+          <span class="text-muted">Powered by <a href="#">Human</a> &copy; 2021–2022</span>
+        </div>
+    </footer>
+
+
+    <script src="/scripts/js/bootstrap.bundle.min.js"></script>
+    <script src="/scripts/js/form-validation.js"></script>
+
+ </body>
+ </html>
